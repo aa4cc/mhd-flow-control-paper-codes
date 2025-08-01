@@ -1,0 +1,3 @@
+If st-link is not detected - reinstall st-link server from STM32 website
+If "no beckend" error - try to link the libusb (https://libusb.info) to ~/usr/lib or ~/usr/local/lib (on mac)
+or do "export DYLD_LIBRARY_PATH=/opt/homebrew/lib"

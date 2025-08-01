@@ -1,0 +1,34 @@
+# this is default config file do not change anything here, its just to verify correct types of data
+"version" = "1.0.0"
+
+[CAMERA]
+"MaxNumBuffer"= 5
+"AcquisitionFrameRateEnable"= true
+"AcquisitionFrameRate"= 25
+"Width"= 1024
+"Height"= 1024
+"OffsetX"= 128
+"ReverseX" = false
+"ReverseY" = false
+"PixelFormat"= "Mono8"
+"ExposureAuto"= "Off"
+"ExposureTime"= 12000.0
+"GainAuto"= "Off"
+"Gain"= 2.0
+
+[PIV]
+"PIV_TYPE" = "DEFAULT"  # DEFAULT, OVERLAYED + Comming soon
+"WINDOW_SIZE_R" = 32    # Window size rows
+"WINDOW_SIZE_C" = 32    # Window size columns
+"OVERLAY_R" = 16        # Overlay rows
+"OVERLAY_C" = 16        # Overlay columns
+"SUB_PIXEL_FUNCTION" = "PARAB" # put "" if None should be used, PARAB|GAUSS|""
+
+[MEASURE]
+"DT_DEVIATION" = 5 # in % - if FPS = 30 => DT = 0.03333 s | DT DEVIATION (5%) = +- 0.00166 s
+"SAVE" = true 
+"NUM_SAMPLES" = 5250 # if SAVE is false, this is not used - make this sufficiently large to fit all of the measuremnts, only the frames actually usd gets saved
+"PLOT" = true # if SAVE is false, plot is always true
+"CREATE_VIDEO" = true # create a video after control is done (provide plotting function in the code)
+"FILE_NAME" = "measurements/control1" # where the file gets saved - suffix gets added automatically 
+"COIL_COMM_PATH" = "/dev/tty.usbserial-2130" # Magman serial port

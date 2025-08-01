@@ -1,0 +1,58 @@
+# Julia-specific
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+*.jl.prof
+*.jl.gcov
+*.jl.*.gcov
+*.ji
+*.so
+*.dylib
+*.dll
+*.o
+
+# Compiled packages
+.julia/compiled/
+.julia/packages/
+
+# VSCode
+.vscode/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Test outputs
+test/*.out
+test/*.log
+
+# Artifacts
+artifacts/
+deps/
+
+# Package build
+Manifest.toml
+
+
+# Documentation
+docs/build/
+
+# MHDSim
+MHDSim/
+
+# AlternatingMPC
+AlternatingMPC.jl/
+
+# Dataset
+dataset/
+
+
+control-simulation/paraview/
+
+
+figure-reproduction/figures/
+
+force-vectors.jld

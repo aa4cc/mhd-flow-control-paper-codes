@@ -1,0 +1,4 @@
+[deps]
+AlternatingMPC = "669a6a7f-5ceb-4909-bfac-7194a5b2134f"
+JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
+MHDSim = "2407bc2c-c923-4b10-8696-5010e821cf5d"

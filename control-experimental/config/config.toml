@@ -1,0 +1,35 @@
+"version" = "1.0.0"
+
+[CAMERA]
+"MaxNumBuffer"= 20
+"AcquisitionFrameRateEnable"= true
+"AcquisitionFrameRate"= 25
+"Width"= 1024
+"Height"= 1024
+"OffsetX"= 128
+"ReverseX" = false
+"ReverseY" = false
+"PixelFormat"= "Mono8"
+"ExposureAuto"= "Off"
+"ExposureTime"= 10000.0
+"GainAuto"= "Off"
+"Gain"= 2.0
+
+[PIV]
+"PIV_TYPE" = "DEFAULT"  # DEFAULT, OVERLAYED + Comming soon
+"WINDOW_SIZE_R" = 32   # Window size rows
+"WINDOW_SIZE_C" = 32    # Window size columns
+"OVERLAY_R" = 16        # Overlay rows
+"OVERLAY_C" = 16        # Overlay columns
+"SUB_PIXEL_FUNCTION" = "PARAB" # put "" if None should be used, PARAB|GAUSS|""
+
+[MEASURE]
+"DT_DEVIATION" = 5 # in % - if FPS = 30 => DT = 0.03333 s | DT DEVIATION (5%) = +- 0.00166 s
+"SAVE" = true
+"NUM_SAMPLES" = 1000 # if SAVE is false, this is not used
+"PLOT" = true # if SAVE is false, plot is always true
+"CREATE_VIDEO" = false
+"FILE_NAME" = "measurements/timelapse_vid2"
+"USE_COMM" = true
+"COIL_COMM_PATH" = "/dev/tty.usbserial-2130"
+"PLAN_PATH" = "plan.txt"
