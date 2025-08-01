@@ -56,3 +56,5 @@ control-simulation/paraview/
 figure-reproduction/figures/
 
 force-vectors.jld
+
+learning/model/
