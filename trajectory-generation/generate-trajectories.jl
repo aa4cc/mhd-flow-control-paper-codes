@@ -115,7 +115,7 @@ function main()
 
         u, v, _ = measure_velocity(state, data, peh)
 
-        vec_field = zeros(2, nx, ny, N + 1)
+        X = zeros(2, nx, ny, N + 1)
 
 
         @showprogress desc = "Trajectory $k/$K" for t = 1:N
@@ -127,12 +127,12 @@ function main()
 
             u, v, _ = measure_velocity(state, data, peh)
 
-            vec_field[1, :, :, t+1] = reshape(u, nx, ny)
-            vec_field[2, :, :, t+1] = reshape(v, nx, ny)
+            X[1, :, :, t+1] = reshape(u, nx, ny)
+            X[2, :, :, t+1] = reshape(v, nx, ny)
 
         end
 
-        JLD.save("trajectories/traj-$k.jld", "vec_field", vec_field, "psi", ψ, "phi", ϕ)
+        JLD.save("trajectories/traj-$k.jld", "X", X, "psi", ψ, "phi", ϕ)
 
     end
 

@@ -58,3 +58,5 @@ figure-reproduction/figures/
 force-vectors.jld
 
 learning/model/
+
+*.tar.gz
