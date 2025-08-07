@@ -24,6 +24,7 @@ function main()
     Np = 10 # Prediction horizon (number of steps)
     w_el = 1e-2 # Weight for the electric field in the cost function
     w_mag = 1.0 # Weight for the magnetic field in the cost function
+    w_err = 1e0 # Weight for the error in the cost function
 
     paraview_prefix = "paraview/vorticity"
 
@@ -88,7 +89,7 @@ function main()
 
     S = sparse(S_rows, S_cols, S_vals, N_ref, nx * ny) # Selection matrix for the reference
 
-    Q = 1e0 / N_ref * sparse(I, N_ref, N_ref) # Cost matrix for the MPC
+    Q = w_err / N_ref * sparse(I, N_ref, N_ref) # Cost matrix for the MPC
     R_el = w_el * sparse(I, n_el, n_el) # Cost matrix for the electrodes
     R_mag = w_mag * sparse(I, n_mag, n_mag) # Cost matrix for the electromagnets
 

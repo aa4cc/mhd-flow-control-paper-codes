@@ -20,7 +20,7 @@ julia --project=. -e 'using Pkg; Pkg.instantiate()'
 2. Execute the training script:
 
 ```bash
-julia --project=. train_koopman_model.jl
+julia --project=. train_model.jl
 ```
 
 ## Output

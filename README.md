@@ -1,6 +1,6 @@
-# Codes related to paper "Real-time control of a magnetohydrodynamic flow"
+# Codes related to paper "Data-driven control of a magnetohydrodynamic flow"
 
-This repository contains all code used for the data generation, learning, simulation, and experimental validation of the Koopman-based MPC strategy for magnetohydrodynamic (MHD) flow control as presented in the paper "Real-time control of a magnetohydrodynamic flow" by Uchytil et al. ([arXiv:2507.12479](https://arxiv.org/abs/2507.12479)).
+This repository contains all code used for the data generation, learning, simulation, and experimental validation of the Koopman-based MPC strategy for magnetohydrodynamic (MHD) flow control as presented in the paper "Data-driven control of a magnetohydrodynamic flow" by Uchytil et al. ([arXiv:2507.12479](https://arxiv.org/abs/2507.12479)).
 
 ## Structure
 

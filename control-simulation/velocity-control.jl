@@ -31,8 +31,9 @@ function main()
     ref_mag = 1e-2 # Magnitude of the reference velocity field (m/s)
 
     Np = 10 # Prediction horizon (number of steps)
-    w_el = 0.1 # Weight for the electric field in the cost function
+    w_el = 0.01 # Weight for the electric field in the cost function
     w_mag = 1.0 # Weight for the magnetic field in the cost function
+    w_err = 1e4 # Weight for the error in the cost function
 
 
     mkpath("paraview") # Ensure the paraview directory exists
@@ -91,7 +92,7 @@ function main()
 
     S = sparse(S_rows, S_cols, S_vals, 2 * N_ref, 2 * nx * ny) # Selection matrix for the reference
 
-    Q = 1e4 / N_ref * sparse(I, 2 * N_ref, 2 * N_ref) # Cost matrix for the MPC
+    Q = w_err / N_ref * sparse(I, 2 * N_ref, 2 * N_ref) # Cost matrix for the MPC
     R_el = w_el * sparse(I, n_el, n_el) # Cost matrix for the electrodes
     R_mag = w_mag * sparse(I, n_mag, n_mag) # Cost matrix for the electromagnets
 

@@ -60,3 +60,4 @@ force-vectors.jld
 learning/model/
 
 *.tar.gz
+*.zip

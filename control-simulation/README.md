@@ -15,8 +15,8 @@ To run these scripts, you first need to install the required Julia packages. You
 ```bash
 julia --project=. -e '
 using Pkg
-Pkg.develop(url="https://github.com/aa4cc/MHDSim.jl")
-Pkg.develop(url="https://github.com/aa4cc/AlternatingMPC.jl")
+Pkg.add(url="https://github.com/aa4cc/MHDSim.jl")
+Pkg.add(url="https://github.com/aa4cc/AlternatingMPC.jl")
 Pkg.instantiate()
 '
 ```
