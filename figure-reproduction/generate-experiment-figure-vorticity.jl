@@ -192,7 +192,7 @@ function generate_vorticity_figure(Ω, X, err, ω_ref, xs, ys; size_pt=(100, 100
 
     yline = vlines!(100.0, color=:red, linestyle=:dash, linewidth=1.5, label="transition")
 
-    axislegend(ax, position=:rt, padding=(5, 5, 0, 0), patchsize=(35, 0))
+    axislegend(ax, position=:rt, padding=(5, 5, 0, 0), patchsize=(30, 12))
 
 
     knots = LinRange(1, size(Ω, 3), N + 1)

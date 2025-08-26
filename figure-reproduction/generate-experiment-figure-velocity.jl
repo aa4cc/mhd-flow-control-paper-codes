@@ -183,19 +183,22 @@ function generate_frame_streamlines_with_timelapse_and_error(Y, ref, frame, err,
     titles = ["Two Vortices", "Jet", "Sides", "Cross"]
     ax = Axis(f[4, :], xlabel = "time (s)", ylabel = "error (cm/s)", height = size_pt[2] / 6)#, title="Error (cm/s)")
 
-    linestyles = [:solid, :dash, :dot, :dashdot]
+    colors = ColorSchemes.okabe_ito
+
+    #linestyles = [:solid, :dash, :dot, :dashdot]
+    linestyles = [:solid, :solid, :solid, :solid]
 
     for i in axes(err, 2)
 
         T = (length(err[:, i])-1) * Δt
 
-        lines!(ax, 0:Δt:T, err[:, i], label = titles[i], linestyle = (linestyles[i], :dense), linewidth= 2.0, colormap = :seaborn_colorblind6, colorrange = (1, 6), color = i)
+        lines!(ax, 0:Δt:T, err[:, i], label = titles[i], linestyle = (linestyles[i], :dense), linewidth= 2.0, color = colors[i], alpha = 1.0)
 
         xlims!(0, T)
 
     end
 
-    axislegend(ax, position = :rt, padding = (5, 5, 0, 0), patchsize = (35, 0), orientation = :horizontal)
+    axislegend(ax, position = :rt, padding = (5, 5, 0, 0), patchsize = (35, 12), orientation = :horizontal)
 
     rowgap!(f.layout, 5)
     colgap!(f.layout, -10)
